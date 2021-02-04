@@ -16,6 +16,26 @@ body{
     width: min(90VW, 800px);
     margin: auto;
 }
+#sr-only{
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: react(0, 0, 0, 0);
+    white-space:nowrap;
+    border-width:0;
+}
+/*  Links e botao ============================================== */
+.button{
+    color: #8257E6;
+    text-decoration: none;
+    display: inline-block;
+}
+.button:hover{
+    color: #170835;
+}
 #linkgithub{
     text-decoration: none;
     color: #f0f2f5;
@@ -58,9 +78,16 @@ header{
     color: var(--dark-blue);
 
 }
+.card:hover{
+    background:#dde0e8;
+}
+
 .card h3{
     font-weight:normal;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .card p{
     font-size: 2rem;
@@ -72,10 +99,15 @@ header{
     background:#8257E6;
     color: #f0f2f5;
 }
+.card.total:hover{
+    background:#6543b3;
+}
 /*  table ============================================== */
 #data-table{
     width: 100%;
     border-spacing: 0 0.5rem;
+    display: block;
+    overflow-x: auto ;
 }
 table th{
     background: white;
@@ -101,6 +133,9 @@ table td{
 table thead tr th:first-child, table tbody tr td:first-child{
     border-radius: 0.5rem 0 0 0.5rem;
 }
+table thead tr th:last-child, table tbody tr td:last-child{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
 
 td.description{
     color: var(--dark-blue);
@@ -118,4 +153,17 @@ footer{
     color: #f0f2f5;
     padding: 0.5rem 0 0.5rem;
 
+}
+
+/*  responsive ============================================== */
+@media(min-width:800px){
+    html{
+        font-size:87.5%;
+
+    }
+    #balance{
+        display:grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        gap: 2rem;
+    }
 }
