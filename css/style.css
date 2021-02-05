@@ -103,11 +103,14 @@ header{
     background:#6543b3;
 }
 /*  table ============================================== */
+#transaction{
+    display:block;
+    width: 100%;
+    overflow-x: auto;
+}
 #data-table{
     width: 100%;
     border-spacing: 0 0.5rem;
-    display: block;
-    overflow-x: auto ;
 }
 table th{
     background: white;
@@ -146,6 +149,82 @@ td.income{
 td.expense{
     color: #e92929;
 }
+/*  modal ============================================== */
+.modal-overlay{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+    position:fixed;
+    top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    visibility: hidden;
+}
+.modal-overlay.active{
+    opacity:1;
+    visibility: visible;
+}
+.modal{
+    background: #d5d5d5;
+    padding: 2.4rem;
+    position: relative;
+    max-width:500px;
+    min-width:300px;
+    max-height:310px;
+    border: 1.5px solid #8257E6;
+    border-radius: 0.5rem;
+    
+
+
+}
+/*  form ============================================== */
+
+#form{
+}
+#form h2{
+    margin-top: 0;
+    color:#170835;
+}
+input{
+    border:none;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    margin: 0.01rem;
+    width:100%;
+
+}
+.input-group{
+    margin-top: 0.8rem;
+}
+.input-group small{
+    opacity: 0.1rem;
+    color:#170835;
+}
+.input-group.actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.input-group.actions .button, .input-group.actions button{
+    width: 20%;
+    height: 40%;
+    border-radius: 0.25rem;
+    font-size: 20px;
+    
+}
+.input-group.actions button{
+    border:1px solid #8257E6;
+    color:#8257E6;
+}
+.input-group.actions button:hover{
+    background:#6543b3;
+    color: #f0f2f5;
+
+}
+
 /*  footer ============================================== */
 footer{
     text-align: center;
