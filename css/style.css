@@ -171,9 +171,6 @@ td.expense{
     background: #d5d5d5;
     padding: 2.4rem;
     position: relative;
-    max-width:500px;
-    min-width:300px;
-    max-height:310px;
     border: 1.5px solid #8257E6;
     border-radius: 0.5rem;
     
@@ -218,6 +215,9 @@ input{
 .input-group.actions button{
     background: #8257E6;
     color:#f0f2f5;
+    height: 40px;
+    width: 80px;
+    border: none;
 }
 .input-group.actions button:hover{
     background:#6543b3;
@@ -244,5 +244,11 @@ footer{
         display:grid;
         grid-template-columns: 2fr 2fr 2fr;
         gap: 2rem;
+    }
+
+}
+@media(max-width:900px){
+    .modal{
+        max-width: 350px;
     }
 }
