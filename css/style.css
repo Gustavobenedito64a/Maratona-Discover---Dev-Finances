@@ -216,8 +216,8 @@ input{
     
 }
 .input-group.actions button{
-    border:1px solid #8257E6;
-    color:#8257E6;
+    background: #8257E6;
+    color:#f0f2f5;
 }
 .input-group.actions button:hover{
     background:#6543b3;
